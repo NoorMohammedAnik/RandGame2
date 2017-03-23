@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txt_highScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="High Score :" />
+
+    <TextView
+        android:id="@+id/txt_Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="150sp"
+        android:layout_marginTop="57dp"
+        android:inputType="textPersonName"
+        android:text="0"
+        android:layout_below="@+id/txt_highScore"
+        android:layout_alignRight="@+id/btn_play"
+        android:layout_alignEnd="@+id/btn_play" />
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_reset"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp"
+        android:text="Play" />
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_Score"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/txt_Score"
+        android:text="Reset" />
+</RelativeLayout>
