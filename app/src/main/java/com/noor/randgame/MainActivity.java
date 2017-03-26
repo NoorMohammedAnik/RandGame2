@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences.Editor editor;
 
 
+    //declare shared prefernce file name
     public final String PREFS_GAME="com.noor.randgame.Game";
 
 
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         btnReset=(Button)findViewById(R.id.btn_reset);
 
 
+        //Creating SharedPreferences name game and mode is private
         pref=getSharedPreferences(PREFS_GAME,MODE_PRIVATE);
         editor=pref.edit();
 
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
                 int getSaveScore=pref.getInt("highScore",0);
 
+                //Checking score is greater than high score
                 if (score>getSaveScore)
                 {
                     txtHighScore.setText("High Score: "+score);
@@ -71,6 +74,10 @@ public class MainActivity extends AppCompatActivity {
 
                 txtHighScore.setText("High Score: 0");
                 txtScore.setText(String.valueOf(0));
+
+
+                //In setText method,we can not write int value directly.
+                //setText method accept only String values
             }
         });
 
